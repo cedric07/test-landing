@@ -1,0 +1,40 @@
+//---------------------------------------------------------------------------
+//------- Fonts
+//---------------------------------------------------------------------------
+
+$font-path:                             "../fonts" !default;
+$font-custom:                           'Montserrat', sans-serif !default;
+$font-thin:                             100 !default;
+$font-extra-light:                      200 !default;
+$font-light:	                        300 !default;
+$font-regular:	                        400 !default;
+$font-medium:	                        500 !default;
+$font-semi-bold:	                    600 !default;
+$font-bold:		                        700 !default;
+$font-extra-bold:                       800 !default;
+$font-black:                            900 !default;
+$default-text-size:                     16px !default;
+
+//---------------------------------------------------------------------------
+//------- General colors
+//---------------------------------------------------------------------------
+
+$color-primary:                         #2196F3 !default;
+$color-secondary:                       #FF4081 !default;
+$color-white:                           #FFFFFF !default;
+$color-black:                           #000000 !default;
+$color-dark:                            #333333 !default;
+$light-grey-color:				        #F6F6F6 !default;
+
+$color-error:                           #FF4A4A !default;
+$color-success:                         #2EE085 !default;
+
+$text-color:                            #777777 !default;
+
+//---------------------------------------------------------------------------
+//------- Buttons
+//---------------------------------------------------------------------------
+
+$button-padding: 						10px 20px !default;
+$button-text-size: 						16px !default;
+$button-line-height:					19px !default;

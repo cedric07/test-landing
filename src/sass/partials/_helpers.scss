@@ -1,0 +1,87 @@
+//---------------------------------------------------------------------------
+//------- Utility Classes
+//---------------------------------------------------------------------------
+
+img.img-responsive,
+video.video-responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+.hide {
+    display: none !important;
+}
+
+// Text Align
+.left-align {
+    text-align: left;
+}
+
+.right-align {
+    text-align: right
+}
+
+.center-align {
+    text-align: center;
+}
+
+// No Text Select
+.no-select {
+    user-select: none;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.truncate {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.p-relative {
+    position: relative;
+}
+
+.only-mobile {
+    @include media-breakpoint-up(md) {
+        display: none !important;
+    }
+}
+
+.only-desktop {
+    @include media-breakpoint-down(md) {
+        display: none !important;
+    }
+}
+
+// Colors classes
+$colors: (
+    "primary": $color-primary,
+    "secondary": $color-secondary,
+    "white": $color-white,
+    "dark": $color-dark,
+    "black": $color-black,
+    "error": $color-error,
+    "success": $color-success,
+    "light-grey": $light-grey-color
+);
+
+@each $name, $hex in $colors {
+    // Text color classes
+    .color-#{$name} {
+        @include textColor($hex);
+    }
+
+    // Bg color classes
+    .bg-#{$name} {
+        @include bgColor($hex);
+    }
+
+    // Button plain classes
+    .btn-#{$name} {
+        @include button-plain-bg($hex);
+    }
+}

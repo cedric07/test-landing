@@ -1,0 +1,7 @@
+.icon {
+    @include x-rem(width, 25px);
+
+    path {
+        fill: currentColor;
+    }
+}

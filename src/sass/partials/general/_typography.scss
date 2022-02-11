@@ -1,0 +1,8 @@
+body {
+    font-family: $font-custom;
+    font-weight: $font-regular;
+    @include x-rem(font-size, $default-text-size);
+    color: $text-color;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

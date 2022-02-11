@@ -1,0 +1,152 @@
+//---------------------------------------------------------------------------
+//------- Mixins généraux
+//---------------------------------------------------------------------------
+@use "sass:math";
+
+/*
+ * A small mixin for easy use of rem with px as fallback
+ * usage: @include x-rem(font-size, 14px)
+ * usage: @include x-rem(margin, 0 12px 2px 12px)
+ * usage: @include x-rem(margin, 12px auto)
+ * usage: @include x-rem(padding, 24px 35px)
+ * usage: @include x-rem(padding, 24px !important)
+ */
+
+@mixin x-rem($property, $values) {
+    // Create a couple of empty lists as output buffers.
+    $base-font-size: 16px;
+    $px-values: ();
+    $rem-values: ();
+
+    // Loop through the $values list
+    @each $value in $values {
+
+        // For each property value, if it's in rem or px, derive both rem and
+        // px values for it and add those to the end of the appropriate buffer.
+        // Ensure all pixel values are rounded to the nearest pixel.
+        @if $value == 0 or $value == 0px {
+            // 0 -- use it without a unit
+            $px-values: join($px-values, 0);
+            $rem-values: join($rem-values, 0);
+        } @else if type-of($value) == number and not unitless($value) and (unit($value) == px) {
+            // px value given - calculate rem value from base-font-size
+            $px-values: join($px-values, round($value));
+            $rem-calc: math.div($value, $base-font-size);
+            $rem-values: join($rem-values,  #{$rem-calc}rem);
+
+        } @else if $value == auto or $value == inherit or $value == '!important' {
+            // auto or inherit or !important - don't add px or rem
+            $px-values: join($px-values, $value);
+            $rem-values: join($rem-values, $value);
+        } @else {
+            // unitless value - use those directly as rem and calculate the px-fallback
+            $px-calc: round($value) * $base-font-size;
+            $px-values: join($rem-values,  #{$px-calc});
+            $rem-values: join($rem-values, #{$value}rem);
+        }
+    }
+
+    // output the converted rules
+    #{$property}: $px-values;
+    #{$property}: $rem-values;
+}
+
+// CSS triangle
+@mixin css-triangle($color, $direction, $size: 6px, $position: absolute, $round: false) {
+    @include pseudo($pos: $position);
+    width: 0;
+    height: 0;
+    @if $round {
+        border-radius: 3px;
+    }
+    @if $direction == down {
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+        border-top: $size solid $color;
+        margin-top: 0 - round( $size / 2.5 );
+    } @else if $direction == up {
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+        border-bottom: $size solid $color;
+        margin-bottom: 0 - round( $size / 2.5 );
+    } @else if $direction == right {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-left: $size solid $color;
+        margin-right: -$size;
+    } @else if $direction == left {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-right: $size solid $color;
+        margin-left: -$size;
+    }
+}
+
+// Pseudo element
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+
+// Input placeholder
+// Ex : @include input-placeholder {color: $grey;}
+@mixin input-placeholder {
+    &.placeholder {
+        @content;
+    }
+    &:-moz-placeholder {
+        @content;
+    }
+    &::-moz-placeholder {
+        @content;
+    }
+    &:-ms-input-placeholder {
+        @content;
+    }
+    &::-webkit-input-placeholder {
+        @content;
+    }
+}
+
+// disable default list style
+@mixin destroyList() {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+// Text color mixin
+@mixin textColor($color) {
+    color: $color !important;
+}
+
+// Bg color mixin
+@mixin bgColor($color) {
+    background-color: $color !important;
+}
+
+// Button plain bg
+@mixin button-plain-bg($color) {
+    border: 1px solid $color;
+    background: $color;
+    transition: all .3s ease-in-out;
+
+    @if ($color == $color-white or $color == $light-grey-color) {
+        color: $color-black;
+    } @else {
+        color: $color-white;
+    }
+
+    &:hover {
+        @if ($color == $color-white or $color == $light-grey-color) {
+            background: $color-black;
+            border-color: $color-black;
+            color: $color-white;
+        } @else {
+            background: $color-white;
+            border-color: $color;
+            color: $color;
+        }
+    }
+}

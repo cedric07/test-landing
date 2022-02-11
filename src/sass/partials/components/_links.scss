@@ -1,0 +1,14 @@
+a {
+    transition: color .3s ease-out;
+
+    // Gets rid of tap active state
+    -webkit-tap-highlight-color: transparent;
+}
+
+a, button {
+    cursor: pointer;
+
+    &:focus {
+        outline: 0;
+    }
+}
