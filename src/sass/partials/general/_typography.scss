@@ -13,7 +13,7 @@ h1, h2, h3, h4 {
     margin-bottom: 0;
 }
 
-.title-big {
+.title--big {
     font-weight: $font-bold;
     @include x-rem(font-size, 44px);
     line-height: 1.227;
@@ -23,7 +23,7 @@ h1, h2, h3, h4 {
     }
 }
 
-.title-semi-big {
+.title--semi-big {
     font-weight: $font-bold;
     @include x-rem(font-size, 36px);
     line-height: 1.417;
@@ -33,7 +33,7 @@ h1, h2, h3, h4 {
     }
 }
 
-.title-medium {
+.title--medium {
     font-weight: $font-bold;
     @include x-rem(font-size, 24px);
     line-height: 1.417;
@@ -43,7 +43,7 @@ h1, h2, h3, h4 {
     }
 }
 
-.title-small {
+.title--small {
     font-weight: $font-bold;
     @include x-rem(font-size, 20px);
     line-height: 1.5;

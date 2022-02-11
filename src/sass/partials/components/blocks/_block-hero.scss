@@ -1,0 +1,72 @@
+.block-hero {
+    @include x-rem(margin, 30px 0 110px 0);
+    display: flex;
+    align-items: center;
+
+    @include media-breakpoint-down(md) {
+        flex-direction: column;
+    }
+
+    &__text {
+        flex: 1;
+
+        @include media-breakpoint-up(md) {
+            @include x-rem(padding-right, 63px);
+            @include x-rem(min-width, 450px);
+
+            @include media-breakpoint-down(lg) {
+                @include x-rem(padding-right, 30px);
+            }
+        }
+
+        .title {
+            @include x-rem(margin-bottom, 30px);
+        }
+
+        .desc {
+            @include x-rem(font-size, 18px);
+            line-height: 1.555;
+            font-weight: $font-regular;
+            margin-bottom: 0;
+        }
+    }
+
+    &__actions {
+        @include x-rem(margin-top, 50px);
+
+        @include media-breakpoint-down(md) {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .icon {
+            @include iconSize(20px);
+            @include x-rem(margin-right, 5px);
+        }
+
+        .btn {
+            @include x-rem(margin-right, 30px);
+
+            @include media-breakpoint-down(md) {
+                margin-right: 0;
+                @include x-rem(margin-bottom, 15px);
+            }
+        }
+    }
+
+    &__media {
+        @include media-breakpoint-up(md) {
+            @include x-rem(margin-right, -16px);
+        }
+
+        @include media-breakpoint-down(md) {
+            @include x-rem(margin-top, 50px);
+            text-align: center;
+
+            img {
+                width: 90%;
+            }
+        }
+    }
+}

@@ -15,9 +15,19 @@
 
     &--medium {
         @include x-rem(padding, $button-medium-padding);
+        font-weight: $font-semi-bold;
     }
 
     &--small {
         @include x-rem(padding, $button-small-padding);
+    }
+}
+
+.btn-link {
+    color: $color-primary;
+    font-weight: $font-semi-bold;
+
+    span {
+        border-bottom: 1px solid currentColor;
     }
 }

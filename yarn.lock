@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@fancyapps/ui@^4.0.25":
+  version "4.0.25"
+  resolved "https://registry.yarnpkg.com/@fancyapps/ui/-/ui-4.0.25.tgz#5b76281487187d831af2a4f51781a1ad553251a4"
+  integrity sha512-jZySO1cRTu+AOlHFKZBiKKX1BuaY56aX08j1Nzd7fijqi3c4YI05387QIl7POTWeqwjmfE+zSR0Hfn7fxL8NUg==
+
 "@gulp-sourcemaps/identity-map@^2.0.1":
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/@gulp-sourcemaps/identity-map/-/identity-map-2.0.1.tgz#a6e8b1abec8f790ec6be2b8c500e6e68037c0019"
