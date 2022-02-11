@@ -1,0 +1,7 @@
+.block {
+    @include x-rem(margin, 105px 0); // Moyenne de tous les blocs pour harmoniser les marges
+
+    @include media-breakpoint-down(md) {
+        @include x-rem(margin, 70px 0);
+    }
+}

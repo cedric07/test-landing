@@ -26,8 +26,13 @@ $color-black:                           #000000 !default;
 $color-dark:                            #2F281E !default;
 $light-color:				            #BCD0E5 !default;
 
-$color-error:                           #FF4A4A !default;
+$color-error:                           #F03E3D !default;
 $color-success:                         #2EE085 !default;
+
+$color-purple:                          #7752BE !default;
+$color-yellow:                          #FAB005 !default;
+$color-red:                             $color-error !default;
+$color-blue:                            #4DADF7 !default;
 
 $text-color:                            $color-dark !default;
 

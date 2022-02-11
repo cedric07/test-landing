@@ -65,7 +65,10 @@ $colors: (
     "black": $color-black,
     "error": $color-error,
     "success": $color-success,
-    "light": $light-color
+    "light": $light-color,
+    "purple": $color-purple,
+    "yellow": $color-yellow,
+    "blue": $color-blue
 );
 
 @each $name, $hex in $colors {

@@ -21,6 +21,10 @@
     &--small {
         @include x-rem(padding, $button-small-padding);
     }
+
+    &--uppercase {
+        text-transform: uppercase;
+    }
 }
 
 .btn-link {
