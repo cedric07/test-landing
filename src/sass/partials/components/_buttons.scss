@@ -4,12 +4,20 @@
     @include x-rem(line-height, $button-line-height);
     @include x-rem(padding, $button-padding);
     font-weight: $font-bold;
+    border-radius: $default-border-radius;
     cursor: pointer;
-    text-transform: uppercase;
     // Gets rid of tap active state
     -webkit-tap-highlight-color: transparent;
     text-align: center;
     outline: none;
     display: inline-block;
     vertical-align: middle;
+
+    &.medium {
+        @include x-rem(padding, $button-medium-padding);
+    }
+
+    &.small {
+        @include x-rem(padding, $button-small-padding);
+    }
 }

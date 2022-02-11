@@ -2,7 +2,53 @@ body {
     font-family: $font-custom;
     font-weight: $font-regular;
     @include x-rem(font-size, $default-text-size);
+    line-height: $default-line-height;
     color: $text-color;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 {
+    font-weight: $font-bold;
+    margin-bottom: 0;
+}
+
+.title-big {
+    font-weight: $font-bold;
+    @include x-rem(font-size, 44px);
+    line-height: 1.227;
+
+    @include media-breakpoint-down(lg) {
+        @include x-rem(font-size, 35px);
+    }
+}
+
+.title-semi-big {
+    font-weight: $font-bold;
+    @include x-rem(font-size, 36px);
+    line-height: 1.417;
+
+    @include media-breakpoint-down(lg) {
+        @include x-rem(font-size, 28px);
+    }
+}
+
+.title-medium {
+    font-weight: $font-bold;
+    @include x-rem(font-size, 24px);
+    line-height: 1.417;
+
+    @include media-breakpoint-down(lg) {
+        @include x-rem(font-size, 21px);
+    }
+}
+
+.title-small {
+    font-weight: $font-bold;
+    @include x-rem(font-size, 20px);
+    line-height: 1.5;
+
+    @include media-breakpoint-down(lg) {
+        @include x-rem(font-size, 18px);
+    }
 }

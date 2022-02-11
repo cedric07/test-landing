@@ -49,15 +49,20 @@
 <div class="container buttons-test">
 	<h1 class="library-title">Boutons</h1>
 	<div class="row">
-		<div class="col">
+		<div class="col-12">
 			<a href="#" class="btn btn-primary">Bouton</a>
-			<a href="#" class="btn btn-secondary">Bouton</a>
 			<a href="#" class="btn btn-dark">Bouton</a>
 			<a href="#" class="btn btn-black">Bouton</a>
 			<a href="#" class="btn btn-error">Bouton</a>
 			<a href="#" class="btn btn-success">Bouton</a>
 			<a href="#" class="btn btn-white">Bouton</a>
-			<a href="#" class="btn btn-light-grey">Bouton</a>
+			<a href="#" class="btn btn-light">Bouton</a>
+		</div>
+		<div class="col-12">
+			<a href="#" class="btn btn-primary medium">Bouton medium</a>
+		</div>
+		<div class="col-12">
+			<a href="#" class="btn btn-primary small">Bouton small</a>
 		</div>
 	</div>
 </div>
@@ -67,12 +72,11 @@
 <div class="container colors-test">
 	<h1 class="library-title">Couleurs class</h1>
 	<span class="color-primary">color-primary</span>
-	<span class="color-secondary">color-secondary</span>
 	<span class="color-dark">color-dark</span>
 	<span class="color-black">color-black</span>
 	<span class="color-error">color-error</span>
 	<span class="color-success">color-success</span>
-	<span class="color-light-grey">color-light-grey</span>
+	<span class="color-light">color-light</span>
 </div>
 
 <hr>
@@ -80,12 +84,54 @@
 <div class="container bg-test">
 	<h1 class="library-title">Backgrounds class</h1>
 	<div class="bg-primary color-white">bg-primary</div>
-	<div class="bg-secondary color-white">bg-secondary</div>
 	<div class="bg-dark color-white">bg-dark</div>
 	<div class="bg-black color-white">bg-black</div>
 	<div class="bg-error color-white">bg-error-primary</div>
 	<div class="bg-success color-white">bg-success</div>
-	<div class="bg-light-grey color-dark">bg-light-grey</div>
+	<div class="bg-light color-dark">bg-light</div>
+</div>
+
+<hr>
+
+<div class="container typo-test">
+	<h1 class="library-title">Typography</h1>
+	<div>title-big <h1 class="title-big">Titre H1</h1></div>
+	<div>title-semi-big <h2 class="title-semi-big">Titre H2</h2></div>
+	<div>title-medium <h3 class="title-medium">Titre H3</h3></div>
+	<div>title-small <h4 class="title-small">Titre H4</h4></div>
+</div>
+
+<hr>
+
+<div class="container form-test">
+	<h1 class="library-title">Forms</h1>
+	<form>
+		<div class="form-columns-half">
+			<div class="form-colum">
+				<div class="form-group">
+					<label class="form-label" for="name">Nom *</label>
+					<input type="text" id="name" name="name" value="" class="form-control">
+				</div>
+				<div class="form-group">
+					<input type="text" id="name2" name="name2" value="" placeholder="Nom" class="form-control">
+				</div>
+			</div>
+			<div class="form-column">
+				<div class="form-group">
+					<label class="form-label" for="type">Type de projet *</label>
+					<select id="type" class="form-control">
+						<option value="">Choisissez</option>
+						<option value="Option 1">Option 1</option>
+						<option value="Option 2">Option 2</option>
+					</select>
+				</div>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<textarea name="message" id="message" placeholder="Votre message" class="form-control"></textarea>
+		</div>
+	</form>
 </div>
 
 <hr>

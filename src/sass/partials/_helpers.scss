@@ -60,13 +60,12 @@ video.video-responsive {
 // Colors classes
 $colors: (
     "primary": $color-primary,
-    "secondary": $color-secondary,
     "white": $color-white,
     "dark": $color-dark,
     "black": $color-black,
     "error": $color-error,
     "success": $color-success,
-    "light-grey": $light-grey-color
+    "light": $light-color
 );
 
 @each $name, $hex in $colors {

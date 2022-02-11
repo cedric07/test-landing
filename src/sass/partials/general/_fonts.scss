@@ -1,40 +1,43 @@
-/* montserrat-300 - latin */
+/* poppins-regular - latin */
 @font-face {
-    font-family: 'Montserrat';
-    src: local(''),
-    url('#{$font-path}/montserrat/montserrat-v18-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-    url('#{$font-path}/montserrat/montserrat-v18-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-    font-weight: $font-light;
+    font-family: 'Poppins';
     font-style: normal;
-    font-display: swap;
-}
-/* montserrat-regular - latin */
-@font-face {
-    font-family: 'Montserrat';
-    src: local(''),
-    url('#{$font-path}/montserrat/montserrat-v18-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-    url('#{$font-path}/montserrat/montserrat-v18-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
     font-weight: $font-regular;
-    font-style: normal;
     font-display: swap;
-}
-/* montserrat-600 - latin */
-@font-face {
-    font-family: 'Montserrat';
     src: local(''),
-    url('#{$font-path}/montserrat/montserrat-v18-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-    url('#{$font-path}/montserrat/montserrat-v18-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url('#{$font-path}/poppins/poppins-v19-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('#{$font-path}/poppins/poppins-v19-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* poppins-500 - latin */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: $font-medium;
+    font-display: swap;
+    src: local(''),
+    url('#{$font-path}/poppins/poppins-v19-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('#{$font-path}/poppins/poppins-v19-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* poppins-600 - latin */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
     font-weight: $font-semi-bold;
-    font-style: normal;
     font-display: swap;
-}
-/* montserrat-700 - latin */
-@font-face {
-    font-family: 'Montserrat';
     src: local(''),
-    url('#{$font-path}/montserrat/montserrat-v18-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-    url('#{$font-path}/montserrat/montserrat-v18-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-    font-weight: $font-bold;
+    url('#{$font-path}/poppins/poppins-v19-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('#{$font-path}/poppins/poppins-v19-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* poppins-700 - latin */
+@font-face {
+    font-family: 'Poppins';
     font-style: normal;
+    font-weight: $font-bold;
     font-display: swap;
+    src: local(''),
+    url('#{$font-path}/poppins/poppins-v19-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('#{$font-path}/poppins/poppins-v19-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }

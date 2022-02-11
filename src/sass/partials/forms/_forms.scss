@@ -1,4 +1,28 @@
-@import "input-fields";
-@import "radio-buttons";
-@import "checkboxes";
-@import "select";
+@import "_input-fields";
+@import "_radio-buttons";
+@import "_checkboxes";
+@import "_select";
+
+.form-group {
+    @include x-rem(margin-bottom, 20px);
+}
+
+.form-label {
+    @include x-rem(margin-bottom, 10px);
+    width: 100%;
+    font-weight: $font-semi-bold;
+}
+
+.form-columns-half {
+    @include media-breakpoint-up(md) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        @include x-rem(grid-column-gap, 40px);
+    }
+
+    .form-column-half {
+        @include media-breakpoint-down(md) {
+            @include x-rem(margin-bottom, 24px);
+        }
+    }
+}

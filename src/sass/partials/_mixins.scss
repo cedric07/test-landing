@@ -132,14 +132,14 @@
     background: $color;
     transition: all .3s ease-in-out;
 
-    @if ($color == $color-white or $color == $light-grey-color) {
+    @if ($color == $color-white) {
         color: $color-black;
     } @else {
         color: $color-white;
     }
 
     &:hover {
-        @if ($color == $color-white or $color == $light-grey-color) {
+        @if ($color == $color-white) {
             background: $color-black;
             border-color: $color-black;
             color: $color-white;

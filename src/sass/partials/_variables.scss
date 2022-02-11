@@ -3,7 +3,7 @@
 //---------------------------------------------------------------------------
 
 $font-path:                             "../fonts" !default;
-$font-custom:                           'Montserrat', sans-serif !default;
+$font-custom:                           'Poppins', sans-serif !default;
 $font-thin:                             100 !default;
 $font-extra-light:                      200 !default;
 $font-light:	                        300 !default;
@@ -14,27 +14,36 @@ $font-bold:		                        700 !default;
 $font-extra-bold:                       800 !default;
 $font-black:                            900 !default;
 $default-text-size:                     16px !default;
+$default-line-height:                   1.625 !default;
 
 //---------------------------------------------------------------------------
 //------- General colors
 //---------------------------------------------------------------------------
 
-$color-primary:                         #2196F3 !default;
-$color-secondary:                       #FF4081 !default;
+$color-primary:                         #FF9900 !default;
 $color-white:                           #FFFFFF !default;
 $color-black:                           #000000 !default;
-$color-dark:                            #333333 !default;
-$light-grey-color:				        #F6F6F6 !default;
+$color-dark:                            #2F281E !default;
+$light-color:				            #BCD0E5 !default;
 
 $color-error:                           #FF4A4A !default;
 $color-success:                         #2EE085 !default;
 
-$text-color:                            #777777 !default;
+$text-color:                            $color-dark !default;
 
 //---------------------------------------------------------------------------
 //------- Buttons
 //---------------------------------------------------------------------------
 
-$button-padding: 						10px 20px !default;
+$button-padding: 						15px 41px !default;
 $button-text-size: 						16px !default;
-$button-line-height:					19px !default;
+$button-line-height:					1.4375 !default;
+
+$button-small-padding: 					8px 15px !default;
+$button-medium-padding: 				11px 24px !default;
+
+//---------------------------------------------------------------------------
+//------- Others
+//---------------------------------------------------------------------------
+
+$default-border-radius:                 4px !default;
