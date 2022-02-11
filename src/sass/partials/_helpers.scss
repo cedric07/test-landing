@@ -70,17 +70,22 @@ $colors: (
 
 @each $name, $hex in $colors {
     // Text color classes
-    .color-#{$name} {
+    .color--#{$name} {
         @include textColor($hex);
     }
 
     // Bg color classes
-    .bg-#{$name} {
+    .bg--#{$name} {
         @include bgColor($hex);
     }
 
     // Button plain classes
-    .btn-#{$name} {
+    .btn--#{$name} {
         @include button-plain-bg($hex);
+    }
+
+    // Button bordered classes
+    .btn--bordered--#{$name} {
+        @include button-bordered($hex);
     }
 }

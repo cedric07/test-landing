@@ -1,6 +1,6 @@
 body {
     font-family: $font-custom;
-    font-weight: $font-regular;
+    font-weight: $font-medium;
     @include x-rem(font-size, $default-text-size);
     line-height: $default-line-height;
     color: $text-color;

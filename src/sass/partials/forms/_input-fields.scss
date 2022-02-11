@@ -1,16 +1,18 @@
-.form-control {
-    display: block;
-    @include x-rem(padding, 10px 15px);
-    line-height: 1.75;
-    background: transparent;
-    border: 1px solid $light-color;
-    width: 100%;
-    color: inherit;
-    outline: none;
-    border-radius: $default-border-radius;
+.form-group {
+    &__control {
+        display: block;
+        @include x-rem(padding, 10px 15px);
+        line-height: 1.75;
+        background: transparent;
+        border: 1px solid $light-color;
+        width: 100%;
+        color: inherit;
+        outline: none;
+        border-radius: $default-border-radius;
 
-    &::placeholder {
-        color: $light-color;
+        &::placeholder {
+            color: $light-color;
+        }
     }
 }
 

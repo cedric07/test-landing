@@ -5,12 +5,12 @@
 
 .form-group {
     @include x-rem(margin-bottom, 20px);
-}
 
-.form-label {
-    @include x-rem(margin-bottom, 10px);
-    width: 100%;
-    font-weight: $font-semi-bold;
+    &__label {
+        @include x-rem(margin-bottom, 10px);
+        width: 100%;
+        font-weight: $font-semi-bold;
+    }
 }
 
 .form-columns-half {

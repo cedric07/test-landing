@@ -150,3 +150,21 @@
         }
     }
 }
+
+// Button bordered
+@mixin button-bordered($color) {
+    border: 1px solid $color;
+    background: transparent;
+    transition: all .3s ease-in-out;
+    color: $color;
+
+    &:hover {
+        @if ($color == $color-white) {
+            background: $color;
+            color: $color-black;
+        } @else {
+            background: $color;
+            color: $color-white;
+        }
+    }
+}

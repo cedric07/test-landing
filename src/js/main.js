@@ -22,12 +22,13 @@ $(document).ready(function () {
 APP.global = {
 	init: function () {
 		/** init function */
-		APP.exemple.init();
+		APP.menu.init();
+		APP.menu.menuActions();
 	},
 	onResize: function () {
 		/** onResize function */
 		$(window).on('resize orientationchange', function () {
-
+			APP.menu.init();
 		});
 	},
 	onScroll: function () {
@@ -38,13 +39,31 @@ APP.global = {
 	}
 };
 
-APP.exemple = {
-	exempleVar: $(),
+APP.menu = {
+	burger: $(),
+	nav: $(),
+	submenu: $(),
+	item: $(),
 
 	init: function () {
-		this.exempleVar = $('.myClass');
+		this.burger = $('.burger-menu');
+		this.nav = $('.header__navs .nav');
 
-		APP.exemple.exempleVar.hide();
+		if (window.matchMedia("(min-width: " + APP.pref.screen_lg + "px)").matches) {
+			// Reset mobile menu
+			$('body').removeClass('menu-mobile-open');
+			APP.menu.burger.removeClass('open');
+		}
+	},
+
+	menuActions: function () {
+		this.burger = $('.burger-menu');
+
+		// Open menu mobile
+		APP.menu.burger.click(function () {
+			$(this).toggleClass('open');
+			$('body').toggleClass('menu-mobile-open');
+		});
 	}
 };
 

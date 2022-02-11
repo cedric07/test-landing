@@ -1,12 +1,12 @@
 <!doctype html>
 <html lang="fr" class="no-js">
 <head>
-    <meta charset="utf-8">
-    <title>Test intégration</title>
+	<meta charset="utf-8">
+	<title>Test intégration</title>
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Meta description">
+	<meta name="viewport"
+		  content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Meta description">
 
 	<link rel="apple-touch-icon" sizes="60x60" href="./img/favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
@@ -18,23 +18,59 @@
 	<meta name="msapplication-config" content="./img/favicon/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="./css/vendors.min.css">
-    <link rel="stylesheet" href="./css/custom.css">
+	<link rel="stylesheet" href="./css/vendors.min.css">
+	<link rel="stylesheet" href="./css/custom.css">
 </head>
 <body>
 
+
 <header class="header" role="banner">
-    <div class="container">
-        <nav role="navigation">
-            header
-        </nav>
-    </div>
+	<div class="container">
+		<div class="header__wrapper">
+			<a href="#" aria-label="Homepage" class="header__logo">
+				<img class="img-responsive" src="./img/logo.svg" alt="Logo">
+			</a>
+
+			<nav role="navigation" class="header__navs">
+				<ul class="nav">
+					<li class="nav__item">
+						<a href="#" title="Product">Product</a>
+					</li>
+					<li class="nav__item">
+						<a href="#" title="Customers">Customers</a>
+					</li>
+					<li class="nav__item">
+						<a href="#" title="Pricing">Pricing</a>
+					</li>
+					<li class="nav__item">
+						<a href="#" title="Resources">Resources</a>
+					</li>
+				</ul>
+
+				<ul class="nav-extra">
+					<li class="nav-extra__item">
+						<a href="#" class="btn btn--bordered--light btn--medium" title="Sign In">Sign In</a>
+					</li>
+					<li class="nav-extra__item">
+						<a href="#" class="btn btn--primary btn--medium" title="Sign Up">Sign Up</a>
+					</li>
+				</ul>
+			</nav>
+
+			<div class="burger-menu">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+	</div>
 </header>
 
 <footer class="footer" role="contentinfo">
-    <div class="container">
-        footer
-    </div>
+	<div class="container">
+		footer
+	</div>
 </footer>
 
 <script src="./js/vendors.min.js"></script>

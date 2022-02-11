@@ -13,11 +13,11 @@
     display: inline-block;
     vertical-align: middle;
 
-    &.medium {
+    &--medium {
         @include x-rem(padding, $button-medium-padding);
     }
 
-    &.small {
+    &--small {
         @include x-rem(padding, $button-small-padding);
     }
 }
