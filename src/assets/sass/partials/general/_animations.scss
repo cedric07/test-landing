@@ -1,0 +1,7 @@
+[data-aos] {
+    visibility: hidden;
+
+    &.aos-animate {
+        visibility: visible;
+    }
+}

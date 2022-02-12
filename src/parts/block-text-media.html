@@ -1,51 +1,51 @@
 <div class="block block--text-media @@if (context.reverse && reverse === true) {block--text-media--reverse}">
 	<div class="container">
 		<div class="block--text-media__wrapper">
-			<div class="block--text-media__text">
+			<div class="block--text-media__text" data-aos="fade-right">
 				<span class="heading">@@heading</span>
 				<h2 class="title title--semi-big">@@title</h2>
 				<div class="desc">
 					<p>@@mainDesc</p>
 
 					@@if (context.type && type == "wysiwyg") {
-					@@if (context.desc1) {
-					<strong>@@desc1.title</strong>
-					<p>@@desc1.content</p>
-					}
-					@@if (!context.desc1) {
-					<strong>Accessory makers</strong>
-					<p>While most people enjoy casino gambling, sports betting, lottery and bingo playing for the fun</p>
-					}
+						@@if (context.desc1) {
+							<strong>@@desc1.title</strong>
+							<p>@@desc1.content</p>
+						}
+						@@if (!context.desc1) {
+							<strong>Accessory makers</strong>
+							<p>While most people enjoy casino gambling, sports betting, lottery and bingo playing for the fun</p>
+						}
 
-					@@if (context.desc2) {
-					<strong>@@desc2.title</strong>
-					<p>@@desc2.content</p>
-					}
-					@@if (!context.desc2) {
-					<strong>Alterationists</strong>
-					<p>If you are looking for a new way to promote your business that won’t cost you more money,</p>
-					}
+						@@if (context.desc2) {
+							<strong>@@desc2.title</strong>
+							<p>@@desc2.content</p>
+						}
+						@@if (!context.desc2) {
+							<strong>Alterationists</strong>
+							<p>If you are looking for a new way to promote your business that won’t cost you more money,</p>
+						}
 
-					@@if (context.desc3) {
-					<strong>@@desc3.title</strong>
-					<p>@@desc3.content</p>
-					}
-					@@if (!context.desc3) {
-					<strong>Custom Design designers</strong>
-					<p>If you are looking for a new way to promote your business that won’t cost you more money,</p>
-					}
+						@@if (context.desc3) {
+							<strong>@@desc3.title</strong>
+							<p>@@desc3.content</p>
+						}
+						@@if (!context.desc3) {
+							<strong>Custom Design designers</strong>
+							<p>If you are looking for a new way to promote your business that won’t cost you more money,</p>
+						}
 					}
 
 					@@if (context.type && type == "list") {
-					<ul class="custom-list">
-						<li>@@list.item1</li>
-						<li>@@list.item2</li>
-						<li>@@list.item3</li>
-					</ul>
+						<ul class="custom-list">
+							<li>@@list.item1</li>
+							<li>@@list.item2</li>
+							<li>@@list.item3</li>
+						</ul>
 					}
 				</div>
 			</div>
-			<div class="block--text-media__media">
+			<div class="block--text-media__media" data-aos="fade-left">
 				<img src="@@webRoot/img/@@image.svg" alt="" class="img-responsive">
 			</div>
 		</div>
