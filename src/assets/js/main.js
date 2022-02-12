@@ -24,6 +24,7 @@ APP.global = {
 		/** init function */
 		APP.menu.init();
 		APP.menu.menuActions();
+		APP.blockCards.cardsSwiper();
 	},
 	onResize: function () {
 		/** onResize function */
@@ -63,6 +64,51 @@ APP.menu = {
 		APP.menu.burger.click(function () {
 			$(this).toggleClass('open');
 			$('body').toggleClass('menu-mobile-open');
+		});
+	}
+};
+
+APP.blockCards = {
+	cardsSwiper: function () {
+		var swiper = '.block-cards__swiper';
+		var sliders = [];
+
+		$(swiper).each(function (index, element) {
+			var swiperClass = swiper + '-' + index;
+
+			$(this).addClass(swiperClass.split('.').join(""));
+
+			var nbrSlides = $(swiperClass + ' .swiper-slide').length;
+
+			var swiperBlockCards = new Swiper(swiperClass, {
+				loop: nbrSlides > 1,
+				slidesPerView: 1,
+				slidesPerGroup: 1,
+				spaceBetween: 32,
+				watchOverflow: true,
+				setWrapperSize: true,
+				roundLengths: true,
+				watchSlidesProgress: true,
+				breakpoints: {
+					576: {
+						loop: nbrSlides > 2,
+						slidesPerView: 2,
+						slidesPerGroup: 2,
+					},
+					768: {
+						loop: nbrSlides > 3,
+						slidesPerView: 3,
+						slidesPerGroup: 3,
+					}
+				},
+				pagination: {
+					el: swiperClass + ' .swiper-pagination',
+					type: 'bullets',
+					clickable: true
+				}
+			});
+
+			sliders.push(swiperBlockCards);
 		});
 	}
 };

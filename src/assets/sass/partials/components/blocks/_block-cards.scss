@@ -1,3 +1,13 @@
 .block-cards {
+    > .title {
+        @include x-rem(margin-bottom, 12px);
+    }
 
+    &__swiper {
+        @include x-rem(margin-top, 55px);
+
+        @include media-breakpoint-down(md) {
+            @include x-rem(margin-top, 30px);
+        }
+    }
 }

@@ -97,7 +97,27 @@
                     &:hover {
                         @include media-breakpoint-up(lg) {
                             color: $color-primary;
+
+                            &:after {
+                                background-color: $color-primary;
+                                @include x-rem(bottom, -3px);
+                            }
                         }
+                    }
+                }
+
+                @include media-breakpoint-up(lg) {
+                    &:after {
+                        @include pseudo();
+                        @include x-rem(bottom, -10px);
+                        left: 50%;
+                        transform: translateX(-50%);
+                        @include x-rem(width, 3px);
+                        @include x-rem(height, 3px);
+                        border-radius: 100%;
+                        background-color: transparent;
+                        pointer-events: none;
+                        transition: all .3s ease-in-out;
                     }
                 }
             }

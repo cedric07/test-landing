@@ -23,6 +23,7 @@ var npmDir = './node_modules';
 // Style Vendor related.
 var styleVendorSRC = [ // Path to Vendor CSS files
 	npmDir + '/@fancyapps/ui/dist/fancybox.css',
+	npmDir + '/swiper/swiper-bundle.css',
 	'./src/assets/css/lib/*.css'
 ];
 var styleVendorDestination = './dist/css/'; // Path to place the compiled CSS file.
@@ -37,6 +38,7 @@ var styleMainFile = 'custom'; // Compiled CSS file name.
 var jsVendorSRC = [ // Path to JS vendor files
 	npmDir + '/jquery/dist/jquery.js',
 	npmDir + '/@fancyapps/ui/dist/fancybox.umd.js',
+	npmDir + '/swiper/swiper-bundle.js',
 	'./src/assets/js/lib/*.js'
 ];
 var jsVendorDestination = './dist/js/'; // Path to place the compiled JS vendors file.

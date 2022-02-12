@@ -5,7 +5,7 @@
 		<div class="desc">
 			<p>@@mainDesc</p>
 
-			@@if (type == "wysiwyg") {
+			@@if (context.type && type == "wysiwyg") {
 				@@if (context.desc1) {
 					<strong>@@desc1.title</strong>
 					<p>@@desc1.content</p>
@@ -34,7 +34,7 @@
 				}
 			}
 
-			@@if (type == "list") {
+			@@if (context.type && type == "list") {
 				<ul class="custom-list">
 					<li>@@list.item1</li>
 					<li>@@list.item2</li>

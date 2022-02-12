@@ -22,61 +22,21 @@
 </head>
 <body>
 
-<header class="header" role="banner">
-	<div class="container">
-		<div class="header__wrapper">
-			<a href="#" aria-label="Homepage" class="header__logo">
-				<img class="img-responsive" src="./img/logo.svg" alt="Logo">
-			</a>
-
-			<nav role="navigation" class="header__navs">
-				<ul class="nav">
-					<li class="nav__item">
-						<a href="#">Product</a>
-					</li>
-					<li class="nav__item">
-						<a href="#">Customers</a>
-					</li>
-					<li class="nav__item">
-						<a href="#">Pricing</a>
-					</li>
-					<li class="nav__item">
-						<a href="#">Resources</a>
-					</li>
-				</ul>
-
-				<ul class="nav-extra">
-					<li class="nav-extra__item">
-						<a href="#" class="btn btn--bordered--light btn--medium">Sign In</a>
-					</li>
-					<li class="nav-extra__item">
-						<a href="#" class="btn btn--primary btn--medium">Sign Up</a>
-					</li>
-				</ul>
-			</nav>
-
-			<div class="burger-menu">
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-			</div>
-		</div>
-	</div>
-</header>
+<!-- header -->
+@@include('@@webRoot/parts/general/header.html')
 
 <main role="main">
 
 	<div class="container">
 
 		<!-- block-hero -->
-		@@include('./parts/block-hero.html')
+		@@include('@@webRoot/parts/block-hero.html')
 
 		<!-- block-icons -->
-		@@include('./parts/block-icons.html')
+		@@include('@@webRoot/parts/block-icons.html')
 
 		<!-- block-text-media -->
-		@@include('./parts/block-text-media.html', {
+		@@include('@@webRoot/parts/block-text-media.html', {
 			"type": "wysiwyg",
 			"image": "design-pro",
 			"heading": "Effortless Validation for",
@@ -85,7 +45,7 @@
 		})
 
 		<!-- block-text-media--reverse -->
-		@@include('./parts/block-text-media.html', {
+		@@include('@@webRoot/parts/block-text-media.html', {
 			"type": "list",
 			"reverse": true,
 			"image": "product-managers",
@@ -100,7 +60,7 @@
 		})
 
 		<!-- block-text-media -->
-		@@include('./parts/block-text-media.html', {
+		@@include('@@webRoot/parts/block-text-media.html', {
 		    "type": "wysiwyg",
 			"image": "marketers",
 			"heading": "Optimisation for",
@@ -109,38 +69,20 @@
 		})
 
 		<!-- block-cards -->
-		@@include('./parts/block-cards.html')
+		@@include('@@webRoot/parts/block-cards.html')
 
 	</div>
 
 </main>
 
-<footer class="footer" role="contentinfo">
-	<div class="container">
-		footer
-	</div>
-</footer>
+<!-- footer -->
+@@include('@@webRoot/parts/general/footer.html')
 
 <script src="@@webRoot/js/vendors.min.js"></script>
 <script src="@@webRoot/js/custom.min.js"></script>
 
 <!-- SVG Sprite -->
-<svg width="0" height="0" class="hidden">
-	<symbol viewBox="0 0 320 512" id="pointer">
-		<path d="M318.4 304.5c-3.531 9.344-12.47 15.52-22.45 15.52h-105l45.15 94.82c9.496 19.94 1.031 43.8-18.91 53.31c-19.95 9.504-43.82 1.035-53.32-18.91L117.3 351.3l-75 88.25c-4.641 5.469-11.37 8.453-18.28 8.453c-2.781 0-5.578-.4844-8.281-1.469C6.281 443.1 0 434.1 0 423.1V56.02c0-9.438 5.531-18.03 14.12-21.91C22.75 30.26 32.83 31.77 39.87 37.99l271.1 240C319.4 284.6 321.1 295.1 318.4 304.5z"></path>
-	</symbol>
-	<symbol viewBox="0 0 384 512" id="play">
-		<path d="M361 215C375.3 223.8 384 239.3 384 256C384 272.7 375.3 288.2 361 296.1L73.03 472.1C58.21 482 39.66 482.4 24.52 473.9C9.377 465.4 0 449.4 0 432V80C0 62.64 9.377 46.63 24.52 38.13C39.66 29.64 58.21 29.99 73.03 39.04L361 215z"></path>
-	</symbol>
-	<symbol viewBox="0 0 512 512" id="heart">
-		<path d="M0 190.9V185.1C0 115.2 50.52 55.58 119.4 44.1C164.1 36.51 211.4 51.37 244 84.02L256 96L267.1 84.02C300.6 51.37 347 36.51 392.6 44.1C461.5 55.58 512 115.2 512 185.1V190.9C512 232.4 494.8 272.1 464.4 300.4L283.7 469.1C276.2 476.1 266.3 480 256 480C245.7 480 235.8 476.1 228.3 469.1L47.59 300.4C17.23 272.1 .0003 232.4 .0003 190.9L0 190.9z"></path>
-	</symbol>
-	<symbol viewBox="0 0 384 512" id="hourglass">
-		<path d="M352 0C369.7 0 384 14.33 384 32C384 49.67 369.7 64 352 64V74.98C352 117.4 335.1 158.1 305.1 188.1L237.3 256L305.1 323.9C335.1 353.9 352 394.6 352 437V448C369.7 448 384 462.3 384 480C384 497.7 369.7 512 352 512H32C14.33 512 0 497.7 0 480C0 462.3 14.33 448 32 448V437C32 394.6 48.86 353.9 78.86 323.9L146.7 256L78.86 188.1C48.86 158.1 32 117.4 32 74.98V64C14.33 64 0 49.67 0 32C0 14.33 14.33 0 32 0H352zM111.1 128H272C282.4 112.4 288 93.98 288 74.98V64H96V74.98C96 93.98 101.6 112.4 111.1 128zM111.1 384H272C268.5 378.7 264.5 373.7 259.9 369.1L192 301.3L124.1 369.1C119.5 373.7 115.5 378.7 111.1 384V384z"></path>
-	</symbol>
-	<symbol viewBox="0 0 448 512" id="tick">
-		<path d="M438.6 105.4C451.1 117.9 451.1 138.1 438.6 150.6L182.6 406.6C170.1 419.1 149.9 419.1 137.4 406.6L9.372 278.6C-3.124 266.1-3.124 245.9 9.372 233.4C21.87 220.9 42.13 220.9 54.63 233.4L159.1 338.7L393.4 105.4C405.9 92.88 426.1 92.88 438.6 105.4H438.6z"></path>
-	</symbol>
-</svg>
+@@include('@@webRoot/parts/sprite-svg.html')
+
 </body>
 </html>
