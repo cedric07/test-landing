@@ -3,12 +3,10 @@
 <head>
 	<meta charset="utf-8">
 	<title>Landing test</title>
-
 	<meta name="robots" content="noindex, nofollow">
 	<meta name="viewport"
 		  content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, shrink-to-fit=no">
 	<meta name="description" content="Meta description">
-
 	<link rel="apple-touch-icon" sizes="60x60" href="./img/favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
@@ -19,8 +17,8 @@
 	<meta name="msapplication-config" content="./img/favicon/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
 
-	<link rel="stylesheet" href="./css/vendors.min.css">
-	<link rel="stylesheet" href="./css/custom.min.css">
+	<link rel="stylesheet" href="@@webRoot/css/vendors.min.css">
+	<link rel="stylesheet" href="@@webRoot/css/custom.min.css">
 </head>
 <body>
 
@@ -72,151 +70,46 @@
 	<div class="container">
 
 		<!-- block-hero -->
-		<div class="block block-hero">
-			<div class="block-hero__text">
-				<h1 class="title title--big">The Design Thinking superpowers</h1>
-				<p class="desc">Tools, tutorials, design and innovation experts, all in one place! The most intuitive
-					way to imagine your next user experience.</p>
-				<div class="block-hero__actions">
-					<a href="#" class="btn btn--primary">Get started</a>
-					<a href="#" data-fancybox data-src="https://www.youtube.com/watch?v=gRcgAZDphys" class="btn-link">
-						<svg class="icon">
-							<use xlink:href="#play"></use>
-						</svg>
-						<span>Watch the Video</span>
-					</a>
-				</div>
-			</div>
-			<div class="block-hero__media">
-				<img src="./img/design-thinking.svg" alt="" class="img-responsive">
-			</div>
-		</div>
-		<!-- block-hero -->
+		@@include('./parts/block-hero.html')
 
 		<!-- block-icons -->
-		<div class="block block-icons">
-			<h2 class="title title--semi-big center-align">We design tools to unveil your superpowers</h2>
-
-			<div class="block-icons__content">
-
-				<div class="block-icons__item">
-					<div class="icon-content">
-						<svg class="icon">
-							<use xlink:href="#pointer"></use>
-						</svg>
-					</div>
-					<h3 class="title title--medium">First click tests</h3>
-					<p class="desc">While most people enjoy casino gambling,</p>
-				</div>
-
-				<div class="block-icons__item">
-					<div class="icon-content">
-						<svg class="icon">
-							<use xlink:href="#play"></use>
-						</svg>
-					</div>
-					<h3 class="title title--medium">Design surveys</h3>
-					<p class="desc">Sports betting, lottery and bingo playing for the fun</p>
-				</div>
-
-				<div class="block-icons__item">
-					<div class="icon-content">
-						<svg class="icon">
-							<use xlink:href="#heart"></use>
-						</svg>
-					</div>
-					<h3 class="title title--medium">Preference tests</h3>
-					<p class="desc">The Myspace page defines the individual.</p>
-				</div>
-
-				<div class="block-icons__item">
-					<div class="icon-content">
-						<svg class="icon">
-							<use xlink:href="#hourglass"></use>
-						</svg>
-					</div>
-					<h3 class="title title--medium">Five second tests</h3>
-					<p class="desc">Personal choices and the overall personality of the person. </p>
-				</div>
-
-			</div>
-
-			<div class="center-align">
-				<a href="#" class="btn btn--primary btn--uppercase">Sign up now</a>
-			</div>
-		</div>
-		<!-- block-icons -->
+		@@include('./parts/block-icons.html')
 
 		<!-- block-text-media -->
-		<div class="block block-text-media">
-			<div class="block-text-media__text">
-				<span class="heading">Effortless Validation for</span>
-				<h2 class="title title--semi-big">Design Professionals</h2>
-				<div class="desc">
-					<p>The Myspace page defines the individual, his or her characteristics, traits, personal choices and
-						the overall personality of the person. </p>
-					<strong>Accessory makers</strong>
-					<p>While most people enjoy casino gambling, sports betting, lottery and bingo playing for the
-						fun</p>
-					<strong>Alterationists</strong>
-					<p>If you are looking for a new way to promote your business that won’t cost you more money, </p>
-					<strong>Custom Design designers</strong>
-					<p>If you are looking for a new way to promote your business that won’t cost you more money, </p>
-				</div>
-			</div>
-			<div class="block-text-media__media">
-				<img src="./img/design-pro.svg" alt="" class="img-responsive">
-			</div>
-		</div>
-		<!-- block-text-media -->
+		@@include('./parts/block-text-media.html', {
+			"type": "wysiwyg",
+			"image": "design-pro",
+			"heading": "Effortless Validation for",
+			"title": "Design Professionals",
+			"mainDesc": "The Myspace page defines the individual, his or her characteristics, traits, personal choices and the overall personality of the person.",
+		})
+
+		<!-- block-text-media--reverse -->
+		@@include('./parts/block-text-media.html', {
+			"type": "list",
+			"reverse": true,
+			"image": "product-managers",
+			"heading": "Easier decision making for",
+			"title": "Product Managers",
+			"mainDesc": "The Myspace page defines the individual, his or her characteristics, traits, personal choices and the overall personality of the person.",
+			"list": {
+				"item1": "Never worry about overpaying for your energy again.",
+				"item2": "We will only switch you to energy companies that we trust and will treat you right",
+				"item3": "We track the markets daily and know where the savings are."
+			}
+		})
 
 		<!-- block-text-media -->
-		<div class="block block-text-media block-text-media--reverse">
-			<div class="block-text-media__text">
-				<span class="heading">Easier decision making for</span>
-				<h2 class="title title--semi-big">Product Managers</h2>
-				<div class="desc">
-					<p>The Myspace page defines the individual, his or her characteristics, traits, personal choices and the overall personality of the person. </p>
-					<ul class="custom-list">
-						<li>
-							Never worry about overpaying for your energy again.
-						</li>
-						<li>
-							We will only switch you to energy companies that we trust and will treat you right
-						</li>
-						<li>
-							We track the markets daily and know where the savings are.
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div class="block-text-media__media">
-				<img src="./img/product-managers.svg" alt="" class="img-responsive">
-			</div>
-		</div>
-		<!-- block-text-media -->
+		@@include('./parts/block-text-media.html', {
+		    "type": "wysiwyg",
+			"image": "marketers",
+			"heading": "Optimisation for",
+			"title": "Marketers",
+			"mainDesc": "Few would argue that, despite the advancements of feminism over the past three decades, women still face a double standard when it comes to their behavior.",
+		})
 
-		<!-- block-text-media -->
-		<div class="block block-text-media">
-			<div class="block-text-media__text">
-				<span class="heading">Optimisation for</span>
-				<h2 class="title title--semi-big">Marketers</h2>
-				<div class="desc">
-					<p>Few would argue that, despite the advancements of feminism over the past three decades, women still face a double standard when it comes to their behavior. </p>
-					<strong>Accessory makers</strong>
-					<p>While most people enjoy casino gambling, sports betting, lottery and bingo playing for the
-						fun</p>
-					<strong>Alterationists</strong>
-					<p>If you are looking for a new way to promote your business that won’t cost you more money, </p>
-					<strong>Custom Design designers</strong>
-					<p>If you are looking for a new way to promote your business that won’t cost you more money, </p>
-				</div>
-			</div>
-			<div class="block-text-media__media">
-				<img src="./img/marketers.svg" alt="" class="img-responsive">
-			</div>
-		</div>
-		<!-- block-text-media -->
+		<!-- block-cards -->
+		@@include('./parts/block-cards.html')
 
 	</div>
 
@@ -228,8 +121,8 @@
 	</div>
 </footer>
 
-<script src="./js/vendors.min.js"></script>
-<script src="./js/custom.min.js"></script>
+<script src="@@webRoot/js/vendors.min.js"></script>
+<script src="@@webRoot/js/custom.min.js"></script>
 
 <!-- SVG Sprite -->
 <svg width="0" height="0" class="hidden">

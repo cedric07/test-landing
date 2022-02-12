@@ -20,6 +20,10 @@
             }
         }
 
+        @include media-breakpoint-down(md) {
+            text-align: center;
+        }
+
         .title {
             @include x-rem(margin-bottom, 30px);
         }
@@ -62,8 +66,9 @@
         }
 
         @include media-breakpoint-down(md) {
-            @include x-rem(margin-top, 50px);
+            @include x-rem(margin-bottom, 40px);
             text-align: center;
+            order: -1;
 
             img {
                 width: 85%;

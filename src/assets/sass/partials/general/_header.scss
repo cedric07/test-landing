@@ -5,19 +5,16 @@
     @include x-rem(height, $header-height);
     display: flex;
     align-items: center;
-    transition: background .3s ease-in-out;
+    border-bottom: 1px solid transparent;
+    transition: border .3s ease-in-out;
 
     @include media-breakpoint-up(lg) {
         @include x-rem(margin-top, 20px);
     }
 
-    .menu-mobile-open & {
-        background-color: $color-primary;
-    }
-
     @include media-breakpoint-down(lg) {
         @include x-rem(height, $header-height-mobile);
-        background-color: $color-primary;
+        border-color: $color-light;
     }
 
     &__wrapper {
@@ -50,14 +47,14 @@
             align-items: flex-start;
             background-color: $color-white;
             visibility: hidden;
-            opacity: 0;
+            //opacity: 0;
             transform: translateX(100%);
             transition: all .3s ease-in-out, visibility 0s .3s;
             overflow-y: auto;
 
             .menu-mobile-open & {
                 visibility: visible;
-                opacity: 1;
+                //opacity: 1;
                 transform: translateX(0);
                 transition: all .3s ease-in-out;
             }
@@ -148,8 +145,8 @@
 // Burger menu
 .burger-menu {
     position: relative;
-    @include x-rem(width, 18px);
-    @include x-rem(height, 14px);
+    @include x-rem(width, 24px);
+    @include x-rem(height, 18px);
     transform: rotate(0deg);
     transition: .5s ease-in-out;
     cursor: pointer;
@@ -161,9 +158,9 @@
     span {
         display: block;
         position: absolute;
-        @include x-rem(height, 1px);
+        @include x-rem(height, 2px);
         width: 100%;
-        background-color: $color-white;
+        background-color: $color-dark;
         opacity: 1;
         left: 0;
         transform: rotate(0deg);
@@ -176,11 +173,11 @@
 
         &:nth-child(2),
         &:nth-child(3) {
-            @include x-rem(top, 6px);
+            @include x-rem(top, 8px);
         }
 
         &:nth-child(4) {
-            @include x-rem(top, 12px);
+            @include x-rem(top, 16px);
         }
     }
 
