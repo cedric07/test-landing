@@ -23,6 +23,7 @@ APP.global = {
 	init: function () {
 		/** init function */
 		APP.menu.init();
+		APP.menu.sticky();
 		APP.menu.menuActions();
 		APP.blockCards.cardsSwiper();
 	},
@@ -35,7 +36,7 @@ APP.global = {
 	onScroll: function () {
 		/** Scroll function */
 		$(window).on('scroll', function () {
-
+			APP.menu.sticky();
 		});
 	}
 };
@@ -45,6 +46,7 @@ APP.menu = {
 	nav: $(),
 	submenu: $(),
 	item: $(),
+	header: $(),
 
 	init: function () {
 		this.burger = $('.burger-menu');
@@ -54,6 +56,16 @@ APP.menu = {
 			// Reset mobile menu
 			$('body').removeClass('menu-mobile-open');
 			APP.menu.burger.removeClass('open');
+		}
+	},
+
+	sticky: function() {
+		this.header = $('.header');
+
+		if ($(window).scrollTop() > 20) {
+			APP.menu.header.addClass('is-sticky');
+		} else {
+			APP.menu.header.removeClass('is-sticky');
 		}
 	},
 

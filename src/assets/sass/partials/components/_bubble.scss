@@ -1,0 +1,45 @@
+.bubble {
+    position: relative;
+    background-color: $color-white;
+    border-radius: 100px;
+    @include x-rem(padding, 14px 25px);
+    box-shadow: 0 2px 8px 0 rgba(86, 117, 146, 0.10);
+    @include x-rem(max-width, 350px);
+
+    @include media-breakpoint-down(md) {
+        max-width: 100%;
+    }
+
+    &:before {
+        @include pseudo;
+        @include x-rem(bottom, -6px);
+        @include x-rem(right, 36px);
+        @include x-rem(width, 17px);
+        @include x-rem(height, 17px);
+        background-color: $color-white;
+        box-shadow: 0 10px 15px 0 rgba(23, 58, 86, 0.10);
+        border-radius: 100%;
+
+        .block--testimonials__item--left & {
+            right: inherit;
+            @include x-rem(left, 36px);
+        }
+    }
+
+    &:after {
+        @include pseudo;
+        @include x-rem(bottom, -10px);
+        @include x-rem(right, 20px);
+        @include x-rem(width, 9px);
+        @include x-rem(height, 9px);
+        transform: translateY(100%);
+        background-color: $color-white;
+        box-shadow: 0 2px 15px 0 rgba(23, 58, 86, 0.10);
+        border-radius: 100%;
+
+        .block--testimonials__item--left & {
+            right: inherit;
+            @include x-rem(left, 20px);
+        }
+    }
+}

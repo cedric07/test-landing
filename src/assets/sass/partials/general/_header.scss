@@ -1,8 +1,10 @@
 .header {
     position: sticky;
+    top: 0;
     z-index: 100;
     width: 100%;
     @include x-rem(height, $header-height);
+    background-color: $color-white;
     display: flex;
     align-items: center;
     border-bottom: 1px solid transparent;
@@ -14,7 +16,11 @@
 
     @include media-breakpoint-down(lg) {
         @include x-rem(height, $header-height-mobile);
-        border-color: $color-light;
+        border-color: rgba($color-light, .5);
+    }
+
+    &.is-sticky {
+        border-color: rgba($color-light, .5);
     }
 
     &__wrapper {

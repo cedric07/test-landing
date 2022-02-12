@@ -6,7 +6,7 @@
         @include pseudo;
         top: 0;
         left: 50%;
-        width: 120vw;
+        width: 140vw;
         height: 835px;
         transform: translateX(-50%);
         background-image: linear-gradient(180deg, rgba(255, 229, 210, 0.63) 0%, rgba(255, 244, 229, 0.00) 100%);
@@ -14,16 +14,143 @@
         z-index: -1;
         pointer-events: none;
 
-        @include media-breakpoint-down(xl) {
-            width: 140vw;
+        @include media-breakpoint-down(lg) {
+            width: 160vw;
         }
 
-        @include media-breakpoint-down(lg) {
-            width: 170vw;
+        @include media-breakpoint-down(md) {
+            background-image: linear-gradient(180deg, rgba(255, 229, 210, 0.63) 0%, rgba(255, 244, 229, 0.00) 40%);
         }
 
         @include media-breakpoint-down(sm) {
             width: 200vw;
+        }
+    }
+
+    &__wrapper {
+        @include x-rem(padding, 157px 0 60px 0);
+
+        @include media-breakpoint-down(md) {
+            @include x-rem(padding, 70px 0 40px 0);
+        }
+    }
+
+    &__content {
+        text-align: center;
+
+        @include media-breakpoint-up(md) {
+            @include x-rem(max-width, 542px);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            @include media-breakpoint-down(lg) {
+                @include x-rem(margin-top, -50px);
+            }
+        }
+
+        .title {
+            @include x-rem(margin-bottom, 25px);
+        }
+
+        .desc {
+            color: #567592;
+        }
+    }
+
+    &__line {
+        display: flex;
+        justify-content: space-between;
+
+        @include media-breakpoint-down(md) {
+            display: none;
+        }
+
+        &--first {
+            @include x-rem(margin-bottom, 160px);
+
+            @include media-breakpoint-down(xl) {
+                @include x-rem(margin-bottom, 200px);
+            }
+
+            @include media-breakpoint-down(lg) {
+                @include x-rem(margin-bottom, 250px);
+            }
+
+            .block--testimonials {
+                &__item {
+                    @include media-breakpoint-up(md) {
+                        &:first-child {
+                            @include x-rem(margin-top, 75px);
+                        }
+
+                        &:last-child {
+                            @include x-rem(margin-right, 94px);
+                        }
+                    }
+                }
+            }
+        }
+
+        &--second {
+            .block--testimonials {
+                &__item {
+                    @include media-breakpoint-up(md) {
+                        &:first-child {
+                            @include x-rem(margin-top, 35px);
+                        }
+
+                        &:nth-child(2) {
+                            @include x-rem(margin-top, 132px);
+                            @include x-rem(margin-right, -40px);
+
+                            @include media-breakpoint-down(xl) {
+                                @include x-rem(margin-right, -200px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__item {
+        position: relative;
+
+        &--left {
+            img {
+                left: 0;
+            }
+
+            .bubble {
+                @include x-rem(margin-left, 60px);
+            }
+        }
+
+        &--right {
+            img {
+                right: 0;
+            }
+
+            .bubble {
+                @include x-rem(margin-right, 60px);
+            }
+        }
+
+        img {
+            @include x-rem(max-width, 98px);
+            width: 100%;
+            position: absolute;
+            top: 0;
+        }
+
+        .bubble {
+            transform: translateY(calc(-100% + 13px));
+
+            @include media-breakpoint-down(lg) {
+                @include x-rem(width, 220px);
+            }
         }
     }
 }

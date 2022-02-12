@@ -1,3 +1,7 @@
 body {
     background-color: $color-white;
+
+    &.menu-mobile-open {
+        overflow: hidden;
+    }
 }
