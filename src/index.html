@@ -27,51 +27,50 @@
 
 <main role="main">
 
-	<div class="container">
+	<!-- block-hero -->
+	@@include('@@webRoot/parts/block-hero.html')
 
-		<!-- block-hero -->
-		@@include('@@webRoot/parts/block-hero.html')
+	<!-- block-icons -->
+	@@include('@@webRoot/parts/block-icons.html')
 
-		<!-- block-icons -->
-		@@include('@@webRoot/parts/block-icons.html')
+	<!-- block-text-media -->
+	@@include('@@webRoot/parts/block-text-media.html', {
+		"type": "wysiwyg",
+		"image": "design-pro",
+		"heading": "Effortless Validation for",
+		"title": "Design Professionals",
+		"mainDesc": "The Myspace page defines the individual, his or her characteristics, traits, personal choices and the overall personality of the person.",
+	})
 
-		<!-- block-text-media -->
-		@@include('@@webRoot/parts/block-text-media.html', {
-			"type": "wysiwyg",
-			"image": "design-pro",
-			"heading": "Effortless Validation for",
-			"title": "Design Professionals",
-			"mainDesc": "The Myspace page defines the individual, his or her characteristics, traits, personal choices and the overall personality of the person.",
-		})
+	<!-- block-text-media--reverse -->
+	@@include('@@webRoot/parts/block-text-media.html', {
+		"type": "list",
+		"reverse": true,
+		"image": "product-managers",
+		"heading": "Easier decision making for",
+		"title": "Product Managers",
+		"mainDesc": "The Myspace page defines the individual, his or her characteristics, traits, personal choices and the overall personality of the person.",
+		"list": {
+			"item1": "Never worry about overpaying for your energy again.",
+			"item2": "We will only switch you to energy companies that we trust and will treat you right",
+			"item3": "We track the markets daily and know where the savings are."
+		}
+	})
 
-		<!-- block-text-media--reverse -->
-		@@include('@@webRoot/parts/block-text-media.html', {
-			"type": "list",
-			"reverse": true,
-			"image": "product-managers",
-			"heading": "Easier decision making for",
-			"title": "Product Managers",
-			"mainDesc": "The Myspace page defines the individual, his or her characteristics, traits, personal choices and the overall personality of the person.",
-			"list": {
-				"item1": "Never worry about overpaying for your energy again.",
-				"item2": "We will only switch you to energy companies that we trust and will treat you right",
-				"item3": "We track the markets daily and know where the savings are."
-			}
-		})
+	<!-- block-text-media -->
+	@@include('@@webRoot/parts/block-text-media.html', {
+		"type": "wysiwyg",
+		"image": "marketers",
+		"heading": "Optimisation for",
+		"title": "Marketers",
+		"mainDesc": "Few would argue that, despite the advancements of feminism over the past three decades, women still face a double standard when it comes to their behavior.",
+	})
 
-		<!-- block-text-media -->
-		@@include('@@webRoot/parts/block-text-media.html', {
-		    "type": "wysiwyg",
-			"image": "marketers",
-			"heading": "Optimisation for",
-			"title": "Marketers",
-			"mainDesc": "Few would argue that, despite the advancements of feminism over the past three decades, women still face a double standard when it comes to their behavior.",
-		})
+	<!-- block-cards -->
+	@@include('@@webRoot/parts/block-cards.html')
 
-		<!-- block-cards -->
-		@@include('@@webRoot/parts/block-cards.html')
-
-	</div>
+	<!-- block-testimonials -->
+	@@include('@@webRoot/parts/block-testimonials.html')
 
 </main>
 

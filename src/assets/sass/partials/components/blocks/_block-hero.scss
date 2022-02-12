@@ -1,10 +1,13 @@
 .block--hero {
     @include x-rem(margin-top, 30px);
-    display: flex;
-    align-items: center;
 
-    @include media-breakpoint-down(md) {
-        flex-direction: column;
+    &__wrapper {
+        display: flex;
+        align-items: center;
+
+        @include media-breakpoint-down(md) {
+            flex-direction: column;
+        }
     }
 
     &__text {

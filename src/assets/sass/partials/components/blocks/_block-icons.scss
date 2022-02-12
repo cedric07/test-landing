@@ -1,6 +1,7 @@
 .block--icons {
     position: relative;
     @include x-rem(padding-bottom, 90px);
+    overflow: hidden;
 
     &:before {
         @include pseudo;
