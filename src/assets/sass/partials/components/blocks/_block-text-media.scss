@@ -1,4 +1,4 @@
-.block-text-media {
+.block--text-media {
     display: flex;
     align-items: center;
 
@@ -7,7 +7,7 @@
     }
 
     &--reverse {
-        .block-text-media {
+        .block--text-media {
             &__text {
                 @include media-breakpoint-up(md) {
                     margin-right: 0;

@@ -1,0 +1,76 @@
+.footer {
+    &__wrapper {
+        @include x-rem(padding, 103px 0 95px 0);
+        border-top: 1px solid rgba($color-light, .5);
+        display: flex;
+        flex-wrap: wrap;
+
+        @include media-breakpoint-down(lg) {
+            @include x-rem(padding, 70px 0);
+        }
+
+        @include media-breakpoint-down(sm) {
+            @include x-rem(padding, 30px 0);
+        }
+    }
+
+    &__item {
+        @include x-rem(padding-right, 20px);
+
+        &--logo {
+            width: 30%;
+
+            @include media-breakpoint-down(lg) {
+                width: 100%;
+                padding-right: 0;
+                @include x-rem(margin-bottom, 30px);
+            }
+        }
+
+        &--links {
+            width: 20%;
+
+            @include media-breakpoint-down(lg) {
+                width: 25%;
+            }
+
+            @include media-breakpoint-down(sm) {
+                width: 50%;
+            }
+        }
+
+        &--form {
+            width: 30%;
+            padding-right: 0;
+
+            @include media-breakpoint-down(lg) {
+                width: 50%;
+            }
+
+            @include media-breakpoint-down(sm) {
+                width: 100%;
+                @include x-rem(margin-top, 30px);
+            }
+        }
+
+        .title {
+            @include x-rem(margin-bottom, 35px);
+
+            @include media-breakpoint-down(sm) {
+                @include x-rem(margin-bottom, 10px);
+            }
+        }
+
+        ul {
+            @include destroyList;
+        }
+
+        li {
+            @include x-rem(margin-top, 15px);
+
+            a {
+                font-weight: $font-regular;
+            }
+        }
+    }
+}

@@ -70,7 +70,7 @@ APP.menu = {
 
 APP.blockCards = {
 	cardsSwiper: function () {
-		var swiper = '.block-cards__swiper';
+		var swiper = '.block--cards__swiper';
 		var sliders = [];
 
 		$(swiper).each(function (index, element) {
